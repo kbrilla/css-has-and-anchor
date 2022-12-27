@@ -1,0 +1,39 @@
+p {
+  font-family: Lato;
+}
+
+/* input:placeholder-shown::placeholder {
+  visibility: hidden;
+}
+
+input:placeholder-shown:focus::placeholder {
+  visibility: visible;
+} */
+
+label input {
+  line-height: 2;
+}
+
+label input {
+  anchor-name: --input;
+}
+
+label input::placeholder {
+  anchor-name: --placeholder;
+  outline: 1px red solid;
+}
+
+label .label {
+  position: absolute;
+  left: anchor(--input left);
+  bottom: anchor(--input top);
+}
+
+label:has(input:placeholder-shown:not(:focus)) .label {
+  left: anchor(--placeholder left);
+  top: anchor(--placeholder top);
+}
+
+/* label:has(input:placeholder-shown:focus) .label {
+
+} */
